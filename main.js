@@ -2,6 +2,7 @@ import './style.css'
 
 import * as THREE from 'three';
 
+import { throttle } from 'lodash-es';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene();
@@ -51,7 +52,20 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 }*/
 
+window.addEventListener(
+    'resize',
+    throttle(
+        () => {
+          camera.aspect = window.innerWidth/window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth,window.innerHeight);
+          renderer.setPixelRatio(window.devicePixelRatio);
 
+        },
+        500,
+        { trailing: true }
+    )
+);
 
 function animate() {
   requestAnimationFrame(animate);
