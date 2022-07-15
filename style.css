@@ -10,7 +10,7 @@ main {
   position: absolute;
 }
 wrapper {
-  height: 99vh;
+  height: 100vh;
   display: grid;
 }
 
@@ -21,14 +21,12 @@ header {
   align-self: center;
 
   horiz-align: center;
-  width: 99vw;
+  width: 100vw;
 }
 
 .links {
-  margin-left: 30%;
-  width: 40%;
+  width: 1fr;
   min-width:160px;
-  margin-right: 30%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
