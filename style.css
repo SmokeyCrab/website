@@ -12,6 +12,9 @@ main {
 wrapper {
   height: 100vh;
   display: grid;
+  top: 0;
+  left: 0;
+  position: fixed;
 }
 
 header {
@@ -19,8 +22,6 @@ header {
   color: white;
   text-align: center;
   align-self: center;
-
-  horiz-align: center;
   width: 100vw;
 }
 
